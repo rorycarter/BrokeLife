@@ -1,4 +1,4 @@
-package BrokeLife.com.Domain.StudentInfo;
+package TheDomain.StudentInfo;
 import java.util.*;
 /**
  * Created by Rory on 2017-08-06.

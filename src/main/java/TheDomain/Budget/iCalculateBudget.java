@@ -1,4 +1,4 @@
-package BrokeLife.com.Domain.Budget;
+package TheDomain.Budget;
 
 /**
  * Created by Rory on 2017-08-07.

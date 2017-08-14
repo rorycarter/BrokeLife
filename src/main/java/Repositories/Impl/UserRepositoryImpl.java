@@ -1,5 +1,6 @@
-package Repositories;
+package Repositories.Impl;
 
+import Repositories.UserRepository;
 import TheDomain.StudentInfo.User;
 
 import java.util.HashMap;
@@ -29,8 +30,8 @@ public class UserRepositoryImpl implements UserRepository {
         return savedUser;
     }
 
-    public User read(String id) {
-        User user = userTable.get(id);
+    public User read(String screenId) {
+        User user = userTable.get(screenId);
         return user;
     }
 
@@ -40,8 +41,8 @@ public class UserRepositoryImpl implements UserRepository {
         return savedUser;
     }
 
-    public void delete(String id) {
-       userTable.remove(id);
+    public void delete(String screenId) {
+       userTable.remove(screenId);
 
     }
 }

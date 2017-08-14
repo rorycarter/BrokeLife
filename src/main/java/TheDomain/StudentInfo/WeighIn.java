@@ -1,4 +1,4 @@
-package BrokeLife.com.Domain.StudentInfo;
+package TheDomain.StudentInfo;
 
 /**
  * Created by Rory on 2017-08-07.
@@ -6,6 +6,7 @@ package BrokeLife.com.Domain.StudentInfo;
 public class WeighIn {
     private double weightNow;
     private double desiredWeight;
+    private String screenId;
 
     public double getDesiredWeight() {
         return desiredWeight;
@@ -15,14 +16,16 @@ public class WeighIn {
         return weightNow;
     }
 
-
+    public String getScreenId() {
+        return screenId;
+    }
 
     private  WeighIn(Builder build)
     {
 
         this.desiredWeight=build.desiredWeight;
         this.weightNow=build.weighNow;
-
+        this.screenId=build.screenId;
 
 
     }
@@ -30,6 +33,7 @@ public class WeighIn {
     {
         private double weighNow;
         private double desiredWeight;
+        private String screenId;
 
         public Builder weighNow(double value)
         {
@@ -46,6 +50,13 @@ public class WeighIn {
             return this;
         }
 
+        public Builder screenId (String value)
+        {
+            this.screenId=value;
+            return this;
+
+
+        }
         public WeighIn build()
         {
 

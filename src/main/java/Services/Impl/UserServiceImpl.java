@@ -1,5 +1,6 @@
-package Services;
+package Services.Impl;
 
+import Services.UserService;
 import TheDomain.StudentInfo.User;
 import Repositories.UserRepository;
 import Repositories.Impl.UserRepositoryImpl;
@@ -7,10 +8,10 @@ import Repositories.Impl.UserRepositoryImpl;
 /**
  * Created by Rory on 2017-08-13.
  */
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     private static UserServiceImpl service=null;
-    UserRepository repository= UserRepositoryImpl.getInstance();
+    UserRepository services= UserRepositoryImpl.getInstance();
 
 
     public static UserServiceImpl getInstance()
@@ -23,24 +24,24 @@ public class UserServiceImpl implements UserService{
 
     public User create(User user)
     {
-        return repository.create(user);
+        return services.create(user);
     }
 
-    public User read(String id)
+    public User read(String screenId)
     {
 
-        return repository.read(id);
+        return services.read(screenId);
 
     }
 
     public User update(User user)
     {
 
-        return repository.update(user);
+        return services.update(user);
 
     }
-    public void delete(String id){
-        repository.delete(id);
+    public void delete(String screenId){
+        services.delete(screenId);
     }
 
 

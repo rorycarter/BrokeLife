@@ -1,4 +1,4 @@
-package BrokeLife.com.Domain.Feedback;
+package TheDomain.Feedback;
 
 /**
  * Created by Rory on 2017-08-07.
@@ -6,9 +6,26 @@ package BrokeLife.com.Domain.Feedback;
 public class Contact
 {
 
-    private int cellNo;
+    private String cellNo;
     private String email;
     private String query;
+    private String screenId;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCellNo() {
+        return cellNo;
+    }
+
+    public String getScreenId() {
+        return screenId;
+    }
+
+    public String getQuery() {
+        return query;
+    }
 
     public Contact()
     {}
@@ -20,16 +37,19 @@ public class Contact
         this.cellNo=builder.cellNo;
         this.email=builder.email;
         this.query=builder.query;
+        this.screenId=builder.screenId;
 
     }
     public static class Builder
     {
-        private int cellNo;
+
         private String email;
         private String query;
+        private String cellNo;
+        private String screenId;
 
 
-        public Builder cellNo(int value)
+        public Builder cellNo(String value)
         {
 
             this.cellNo=value;
@@ -45,6 +65,11 @@ public class Contact
         public Builder query(String value)
         {
             this.query=value;
+            return this;
+        }
+        public Builder screenId(String value)
+        {
+            this.screenId=value;
             return this;
         }
 

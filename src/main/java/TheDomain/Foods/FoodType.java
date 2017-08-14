@@ -1,4 +1,4 @@
-package BrokeLife.com.Domain.Foods;
+package TheDomain.Foods;
 
 /**
  * Created by Rory on 2017-08-07.

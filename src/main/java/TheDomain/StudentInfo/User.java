@@ -1,7 +1,6 @@
-package BrokeLife.com.Domain.StudentInfo;
+package TheDomain.StudentInfo;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -11,7 +10,7 @@ public class User implements Serializable{
     private String screenId;
     private String password;
     private double budget;
-    //private Date dateJoined;
+    private Date dateJoined;
 
     //ArrayList<Allergies>allergyList=new ArrayList<>();
 
@@ -29,17 +28,17 @@ public class User implements Serializable{
         return budget;
     }
 
-   /* public Date getDateJoined() {
+    public Date getDate() {
         return dateJoined;
-    }*/
+    }
 
-    private User(Builder builder)
+    public User(Builder builder)
     {
 
         this.password=builder.password;
         this.screenId=builder.screenID;
         this.budget=builder.budget;
-        //this.dateJoined=builder.dateJoined;
+        this.dateJoined=builder.dateJoined;
 
     }
 
@@ -49,7 +48,7 @@ public class User implements Serializable{
         private String screenID;
         private String password;
         private double budget;
-        //private Date dateJoined;
+        private Date dateJoined;
 
 
 
@@ -72,18 +71,17 @@ public class User implements Serializable{
             return this;
         }
 
-      /*  public Builder dateJoined(Date v)
-        {
 
-            this.dateJoined=v;
-            return this;
-        }
-*/
+
         public Builder budget(double val)
         {
             this.budget=val;
             return this;
 
+        }
+        public Builder dateJoined(Date value) {
+            this.dateJoined=value;
+            return this;
         }
         public User build()
         {
@@ -92,6 +90,8 @@ public class User implements Serializable{
             return new User(this);
 
         }
+
+
     }
     public boolean equals(Object o)
     {
